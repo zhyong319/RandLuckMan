@@ -123,5 +123,10 @@ namespace RandLuckMan
         {
 
         }
+
+        private void Write(struct man)
+        {
+            
+        }
     }
 }
