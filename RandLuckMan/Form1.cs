@@ -17,13 +17,19 @@ namespace RandLuckMan
         XmlDocument xmlDocument;
         XmlNodeList xmlNodeList;
         int keyPressCount;
+        public struct LUCKMANINFO
+        {
+            public string section;
+            public string name;
+        } ;
         public Form1()
         {
             InitializeComponent();
             
             keyPressCount = 0;
-            
-                LoadXML("UserInfoLib.xml"); //加载XML文件
+
+            LUCKMANINFO luckManInfo;
+            LoadXML("UserInfoLib.xml"); //加载XML文件
             if (File.Exists("background.jpg")) //如果有背景图片，加载背景图片
             {
                 try
@@ -104,7 +110,7 @@ namespace RandLuckMan
             }
             if (e.KeyCode == Keys.H) //按下H键
             {
-
+                // Insert code here
             }
         }
 
