@@ -22,13 +22,14 @@ namespace RandLuckMan
             public string section;
             public string name;
         } ;
+        LUCKMANINFO luckManInfo;
         public Form1()
         {
             InitializeComponent();
             
             keyPressCount = 0;
 
-            LUCKMANINFO luckManInfo;
+            
             LoadXML("UserInfoLib.xml"); //加载XML文件
             if (File.Exists("background.jpg")) //如果有背景图片，加载背景图片
             {
@@ -87,6 +88,8 @@ namespace RandLuckMan
             this.label1.Text = strSection;
             this.label2.Text = strName;
             this.label3.Text = num.ToString();
+            luckManInfo.name = strName;
+            luckManInfo.section = strSection;
         }
         private void OnKeyPress(object sender, KeyEventArgs e)   //检查什么键按下了
         {
@@ -124,8 +127,9 @@ namespace RandLuckMan
 
         }
 
-        private void Write(struct man)
+        private void Write(LUCKMANINFO man)
         {
+            //File f = File.Create("LuckMan.txt");
             
         }
     }
