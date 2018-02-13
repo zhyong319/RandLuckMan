@@ -28,8 +28,8 @@ namespace RandLuckMan
             InitializeComponent();
             
             keyPressCount = 0;
-
-            
+            this.WindowState = FormWindowState.Maximized; //全屏显示
+            this.FormBorderStyle = FormBorderStyle.None;
             LoadXML("UserInfoLib.xml"); //加载XML文件
             if (File.Exists("background.jpg")) //如果有背景图片，加载背景图片
             {
