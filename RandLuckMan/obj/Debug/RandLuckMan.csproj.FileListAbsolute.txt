@@ -18,3 +18,12 @@ D:\VS_Application\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.csproj.GenerateR
 D:\VS_Application\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.csproj.CoreCompileInputs.cache
 D:\VS_Application\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.exe
 D:\VS_Application\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.pdb
+D:\Git\RandLuckMan\RandLuckMan\bin\Debug\RandLuckMan.exe.config
+D:\Git\RandLuckMan\RandLuckMan\bin\Debug\RandLuckMan.exe
+D:\Git\RandLuckMan\RandLuckMan\bin\Debug\RandLuckMan.pdb
+D:\Git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.Form1.resources
+D:\Git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.Properties.Resources.resources
+D:\Git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.csproj.GenerateResource.Cache
+D:\Git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.csproj.CoreCompileInputs.cache
+D:\Git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.exe
+D:\Git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.pdb

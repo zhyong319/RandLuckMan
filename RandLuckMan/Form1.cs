@@ -43,10 +43,21 @@ namespace RandLuckMan
                     MessageBox.Show("没有找到指定的 userInfoLib.xml 文件，请检查");
                 }
             }
-           
+
+            if (File.Exists("LuckMan.txt"))  //文件存在
+            {
+                File.Delete("LuckMan.txt"); //删除原LUCKMAN.TXT文件
+                using (StreamWriter sw = File.CreateText("LuckMan.txt"))
+                {
+                    sw.WriteLine("README");
+                    sw.WriteLine("该文本仅保存本次随机抽选结果！");
+                    sw.WriteLine("=====================================");
+                }
+            }
+
 
         }
-        
+
         private int GetRandNumber(int upNum) //获取随机数
         {
             int randNum;
@@ -105,6 +116,7 @@ namespace RandLuckMan
                 {
                     this.timer1.Enabled = false;
                     keyPressCount = 0;
+                    Write(luckManInfo);
                 }
             }
             if (e.KeyCode == Keys.Q) //按下Q键
@@ -129,8 +141,15 @@ namespace RandLuckMan
 
         private void Write(LUCKMANINFO man)
         {
-            //File f = File.Create("LuckMan.txt");
-            
+            DateTime dt = DateTime.Now;
+            string strDateTime = dt.ToLocalTime().ToString();
+            string filePath = "LuckMan.txt";
+            using (StreamWriter sw = File.AppendText(filePath))
+            {
+                sw.WriteLine(strDateTime + "  " + man.section + "  " + man.name);
+                sw.WriteLine("------------------------------------------------------------------");
+            }        
+
         }
     }
 }
