@@ -27,3 +27,4 @@ D:\Git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.csproj.GenerateResource.Cac
 D:\Git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.csproj.CoreCompileInputs.cache
 D:\Git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.exe
 D:\Git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.pdb
+D:\Git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.csprojResolveAssemblyReference.cache
