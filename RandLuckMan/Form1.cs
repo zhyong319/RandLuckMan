@@ -31,8 +31,7 @@ namespace RandLuckMan
         {
             InitializeComponent();
             mouseClickCouter = 0;
-            configModeFlag = false;
-           
+            configModeFlag = false;          
             selectLable = null;
             keyPressCount = 0;
             this.WindowState = FormWindowState.Maximized; //全屏显示
@@ -62,6 +61,7 @@ namespace RandLuckMan
                 }
             }
 
+            LoadLocationFile(); //检查LOCATION文件是否存在，否则创建一个
             this.label3.Location = new Point(0,Screen.GetBounds(this).Bottom-30); //设置LABEL3控件的位置
 
         }
@@ -220,6 +220,65 @@ namespace RandLuckMan
                 mouseClickCouter = 0;
             }
             this.label3.Text = "Mouse Click Down. " + mouseClickCouter.ToString() + " times!";
+        }
+
+        private void LoadLocationFile()
+        {
+            string filePath = @"Location.xml";
+            if (!File.Exists(filePath)) //文件不存在
+            {
+                XmlDocument xml = new XmlDocument();
+                XmlDeclaration decl = xml.CreateXmlDeclaration("1.0", "utf-8", null);
+                xml.AppendChild(decl); //创建声明
+                XmlElement rootEle = xml.CreateElement("位置");
+                xml.AppendChild(rootEle); //创建根节点
+
+                XmlElement childElemnet1 = xml.CreateElement("Label_1"); //创建位置根下Label1子节点
+                XmlElement childElement1_location = xml.CreateElement("控件坐标");
+                XmlElement childElemnet1_location_x = xml.CreateElement("X");
+                XmlElement childElement1_location_y = xml.CreateElement("Y");
+                XmlElement childElement1_color = xml.CreateElement("字体颜色");
+                XmlElement childElement1_color_R = xml.CreateElement("R");
+                XmlElement childElement1_color_G = xml.CreateElement("G");
+                XmlElement childElement1_color_B = xml.CreateElement("B");
+                childElemnet1_location_x.InnerText = 100.ToString();
+                childElement1_location_y.InnerText = 100.ToString();
+                childElement1_color_R.InnerText = 255.ToString();
+                childElement1_color_G.InnerText = 255.ToString();
+                childElement1_color_B.InnerText = 255.ToString();
+                rootEle.AppendChild(childElemnet1);
+                childElemnet1.AppendChild(childElement1_location);
+                childElement1_location.AppendChild(childElemnet1_location_x);
+                childElement1_location.AppendChild(childElement1_location_y);
+                childElemnet1.AppendChild(childElement1_color);
+                childElement1_color.AppendChild(childElement1_color_R);
+                childElement1_color.AppendChild(childElement1_color_G);
+                childElement1_color.AppendChild(childElement1_color_B);
+
+                XmlElement childElemnet2 = xml.CreateElement("Label_2"); //创建位置根下Label2子节点
+                XmlElement childElement2_location = xml.CreateElement("控件坐标");
+                XmlElement childElemnet2_location_x = xml.CreateElement("X");
+                XmlElement childElement2_location_y = xml.CreateElement("Y");
+                XmlElement childElement2_color = xml.CreateElement("字体颜色");
+                XmlElement childElement2_color_R = xml.CreateElement("R");
+                XmlElement childElement2_color_G = xml.CreateElement("G");
+                XmlElement childElement2_color_B = xml.CreateElement("B");
+                childElemnet2_location_x.InnerText = 100.ToString();
+                childElement2_location_y.InnerText = 100.ToString();
+                childElement2_color_R.InnerText = 255.ToString();
+                childElement2_color_G.InnerText = 255.ToString();
+                childElement2_color_B.InnerText = 255.ToString();
+                rootEle.AppendChild(childElemnet2);
+                childElemnet2.AppendChild(childElement2_location);
+                childElement2_location.AppendChild(childElemnet2_location_x);
+                childElement2_location.AppendChild(childElement2_location_y);
+                childElemnet2.AppendChild(childElement2_color);
+                childElement2_color.AppendChild(childElement2_color_R);
+                childElement2_color.AppendChild(childElement2_color_G);
+                childElement2_color.AppendChild(childElement2_color_B);
+
+                xml.Save(filePath);//保存文件
+            }
         }
     }
 }
