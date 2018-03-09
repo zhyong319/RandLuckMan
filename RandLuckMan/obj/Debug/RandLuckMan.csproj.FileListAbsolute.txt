@@ -21,6 +21,7 @@ D:\VS_Application\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.pdb
 D:\git\RandLuckMan\RandLuckMan\bin\Debug\RandLuckMan.exe.config
 D:\git\RandLuckMan\RandLuckMan\bin\Debug\RandLuckMan.exe
 D:\git\RandLuckMan\RandLuckMan\bin\Debug\RandLuckMan.pdb
+D:\git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.csprojResolveAssemblyReference.cache
 D:\git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.Form1.resources
 D:\git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.Properties.Resources.resources
 D:\git\RandLuckMan\RandLuckMan\obj\Debug\RandLuckMan.csproj.GenerateResource.Cache
